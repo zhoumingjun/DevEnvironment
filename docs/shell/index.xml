@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shells on devenv Docs</title>
+    <link>https://zhoumingjun.github.io/devenv/shell/index.xml</link>
+    <description>Recent content in Shells on devenv Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Released under the MIT license</copyright>
+    <lastBuildDate>Tue, 07 Mar 2017 10:13:34 +0800</lastBuildDate>
+    <atom:link href="https://zhoumingjun.github.io/devenv/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Shell</title>
+      <link>https://zhoumingjun.github.io/devenv/shell/</link>
+      <pubDate>Tue, 07 Mar 2017 10:13:34 +0800</pubDate>
+      
+      <guid>https://zhoumingjun.github.io/devenv/shell/</guid>
+      <description>
+
+&lt;h2 id=&#34;zsh&#34;&gt;zsh&lt;/h2&gt;
+
+&lt;p&gt;oh-my-zsh configuration:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sh -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&amp;quot;
+curl -o ~/.oh-my-zsh/themes/honukai.zsh-theme https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm/master/honukai.zsh-theme
+case &amp;quot;$OSTYPE&amp;quot; in
+darwin*)  sed -i &#39;&#39; &#39;s/^ZSH_THEME=.*/ZSH_THEME=&amp;quot;honukai&amp;quot;/&#39; ~/.zshrc ;; 
+linux*)   sed -i &#39;s/^ZSH_THEME=.*/ZSH_THEME=&amp;quot;honukai&amp;quot;/&#39; ~/.zshrc ;;
+*)        echo &amp;quot;unknown: $OSTYPE&amp;quot; ;;
+esac
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

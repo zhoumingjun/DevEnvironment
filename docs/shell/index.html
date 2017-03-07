@@ -1,250 +1,473 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
 
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>shell · GitBook</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
-        
-        
-        
-    
-    <link rel="stylesheet" href="../gitbook/style.css">
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>Shell - devenv Docs</title>
+    <meta name="generator" content="Hugo 0.19" />
 
     
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
-
+    <meta name="description" content="A material design theme for documentations.">
+    
+    <link rel="canonical" href="https://zhoumingjun.github.io/devenv/shell/">
+    
+    <meta name="author" content="zhoumingjun">
     
 
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-        
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta property="og:url" content="https://zhoumingjun.github.io/devenv/shell/">
+    <meta property="og:title" content="devenv Docs">
+    <meta property="og:image" content="https://zhoumingjun.github.io/devenv/images/logo.png">
+    <meta name="apple-mobile-web-app-title" content="devenv Docs">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://zhoumingjun.github.io/devenv/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://zhoumingjun.github.io/devenv/images/favicon.ico">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('https://zhoumingjun.github.io/devenv/fonts/icon.eot');
+        src: url('https://zhoumingjun.github.io/devenv/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('https://zhoumingjun.github.io/devenv/fonts/icon.woff')
+               format('woff'),
+             url('https://zhoumingjun.github.io/devenv/fonts/icon.ttf')
+               format('truetype'),
+             url('https://zhoumingjun.github.io/devenv/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://zhoumingjun.github.io/devenv/stylesheets/application.css">
+    <link rel="stylesheet" href="https://zhoumingjun.github.io/devenv/stylesheets/temporary.css">
+    <link rel="stylesheet" href="https://zhoumingjun.github.io/devenv/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://zhoumingjun.github.io/devenv/stylesheets/highlight/highlight.css">
 
     
     
-    <link rel="prev" href="../" />
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <link rel="stylesheet" href="https://zhoumingjun.github.io/devenv/css/custom.css">
+    
+    <script src="https://zhoumingjun.github.io/devenv/javascripts/modernizr.js"></script>
+
     
 
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+  </head>
+  <body class="palette-primary-red palette-accent-teal">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
 </div>
 
-            
-                <nav role="navigation">
-                
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
 
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        Shell
+      </div>
+    </div>
 
-<ul class="summary">
     
-    
 
     
-
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/zhoumingjun" title="@zhoumingjun on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
     
         
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  <a href="https://github.com/zhoumingjun/devenv" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="https://zhoumingjun.github.io/devenv/images/logo.png">
+        </div>
+      
+      <div class="name">
+        <strong>devenv Docs <span class="version">1.0.0</span></strong>
         
+          <br>
+          zhoumingjun/devenv
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/zhoumingjun/devenv/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/zhoumingjun/devenv/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
     
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    Introduction
-            
-                </a>
-            
 
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.2" data-path="./">
-            
-                <a href="./">
-            
-                    
-                    shell
-            
-                </a>
-            
 
-            
-        </li>
+
+<a  title="Summary" href="https://zhoumingjun.github.io/devenv/">
+	
+	Summary
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
     
 
-    
 
-    <li class="divider"></li>
 
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
-    </li>
+<a class="current" title="Shell" href="https://zhoumingjun.github.io/devenv/shell/">
+	
+	Shell
+</a>
+
+
+<ul id="scrollspy">
 </ul>
 
 
-                </nav>
-            
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="CD" href="https://zhoumingjun.github.io/devenv/cd/">
+	
+	CD
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
         
+
+        
+        <hr>
+        <span class="section">The author</span>
+        
+        <ul>
+          
+
+          
+          <li>
+            <a href="https://github.com/zhoumingjun" target="_blank" title="@zhoumingjun on GitHub">
+              @zhoumingjun on GitHub
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:zhoumingjun@gmail.com" title="Email of zhoumingjun@gmail.com">
+              Contact via email
+            </a>
+          </li>
+          
+        </ul>
+        
+      </div>
     </div>
+  </div>
+</nav>
 
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
+	</div>
 
-<div class="book-header" role="navigation">
-    
+	<article class="article">
+		<div class="wrapper">
+			<h1>Shell </h1>
 
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >shell</a>
-    </h1>
-</div>
+			
 
+<h2 id="zsh">zsh</h2>
 
+<p>oh-my-zsh configuration:</p>
 
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="shell">shell</h1>
-<h2 id="oh-my-zsh">oh-my-zsh</h2>
-<pre><code class="lang-bash">sh -c <span class="hljs-string">&quot;<span class="hljs-variable">$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>&quot;</span>
+<pre><code>sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;
 curl -o ~/.oh-my-zsh/themes/honukai.zsh-theme https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm/master/honukai.zsh-theme
-<span class="hljs-keyword">case</span> <span class="hljs-string">&quot;<span class="hljs-variable">$OSTYPE</span>&quot;</span> <span class="hljs-keyword">in</span>
-  darwin*)  sed -i <span class="hljs-string">&apos;&apos;</span> <span class="hljs-string">&apos;s/^ZSH_THEME=.*/ZSH_THEME=&quot;honukai&quot;/&apos;</span> ~/.zshrc ;; 
-  linux*)   sed -i <span class="hljs-string">&apos;s/^ZSH_THEME=.*/ZSH_THEME=&quot;honukai&quot;/&apos;</span> ~/.zshrc ;;
-  *)        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;unknown: <span class="hljs-variable">$OSTYPE</span>&quot;</span> ;;
-<span class="hljs-keyword">esac</span>
+case &quot;$OSTYPE&quot; in
+darwin*)  sed -i '' 's/^ZSH_THEME=.*/ZSH_THEME=&quot;honukai&quot;/' ~/.zshrc ;; 
+linux*)   sed -i 's/^ZSH_THEME=.*/ZSH_THEME=&quot;honukai&quot;/' ~/.zshrc ;;
+*)        echo &quot;unknown: $OSTYPE&quot; ;;
+esac
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
+			
+			<div class="article-container">
+			
+<section id="comments">
+  <div id="disqus_thread">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'zhoumingjun';
+    var disqus_identifier = 'https:\/\/zhoumingjun.github.io\/devenv\/shell\/';
+    var disqus_title = 'Shell';
+    var disqus_url = 'https:\/\/zhoumingjun.github.io\/devenv\/shell\/';
 
-                        </div>
-                    </div>
-                
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</section>
+
+
+			</div>
+
+			<aside class="copyright" role="note">
+				
+				&copy; 2017 Released under the MIT license &ndash;
+				
+				Documentation built with
+				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
+				using the
+				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
+			</aside>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="https://zhoumingjun.github.io/devenv/" title="Summary">
+        <span class="direction">
+          Previous
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Summary
             </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
 
-            
-                
-                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-            
-        
-    </div>
+  <div class="next">
+  
+      <a href="https://zhoumingjun.github.io/devenv/cd/" title="Continous Delivery">
+        <span class="direction">
+          Next
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              Continous Delivery
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
 
     <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"shell","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"shell/README.md","mtime":"2017-03-03T03:56:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-03T03:47:51.051Z"},"basePath":"..","book":{"language":""}});
-        });
+    
+      var base_url = 'https:\/\/zhoumingjun.github.io\/devenv\/';
+      var repo_id  = 'zhoumingjun\/devenv';
+    
     </script>
-</div>
 
-        
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
+    <script src="https://zhoumingjun.github.io/devenv/javascripts/application.js"></script>
     
 
-    </body>
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+         
+        ga('create', 'UA-93100853-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+         
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+         
+        var query = document.querySelector('.query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
 
