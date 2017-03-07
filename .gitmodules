@@ -1,5 +1,3 @@
-[submodule "hugo-material-docs"]
+[submodule "themes/hugo-material-docs"]
 	path = themes/hugo-material-docs
-	url = https://github.com/zhoumingjun/devenv.git
-	branch = master
-
+	url = https://github.com/zhoumingjun/hugo-material-docs.git
