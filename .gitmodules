@@ -1,5 +1,5 @@
 [submodule "hugo-material-docs"]
 	path = themes/hugo-material-docs
-	url = git@github.com:zhoumingjun/hugo-material-docs.git
+	url = https://github.com/zhoumingjun/devenv.git
 	branch = master
 
